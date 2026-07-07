@@ -1,0 +1,9 @@
+node_modules/
+.next/
+out/
+.vercel/
+.npm-cache/
+
+*.log
+.env*
+!.env.example
