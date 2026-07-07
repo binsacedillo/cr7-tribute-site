@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE082" />
+      <stop offset="50%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#996515" />
+    </linearGradient>
+  </defs>
+  <!-- Background Shield for Premium Look -->
+  <path d="M4 4h24v16c0 6-5 10-12 10S4 26 4 20V4z" fill="#090909" stroke="url(#gold)" stroke-width="1.5" />
+  <!-- Crown on Top -->
+  <path d="M9 10l3 2.5L16 8l4 4.5 3-2.5v7H9v-7z" fill="url(#gold)" />
+  <!-- Minimalist '7' -->
+  <path d="M13 18.5h6l-3.5 5.5" stroke="#FFE082" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+</svg>
