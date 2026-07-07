@@ -44,6 +44,10 @@ export function CR7Experience() {
       <LegacySection quoteIndex={quoteIndex} siuuCount={siuu.count} onNextQuote={showNextQuote} onSiuu={siuu.increment} />
       <Footer />
       <DetailModal modal={modal} onClose={closeModal} />
+      {/* Floating Watermark */}
+      <div className="fixed bottom-6 right-6 z-50 pointer-events-none select-none font-mono text-[9px] uppercase tracking-[0.35em] text-museum-gold/25">
+        Vince Aced 2026
+      </div>
     </main>
   );
 }

@@ -18,8 +18,26 @@ export function useSmoothScroll() {
 
     raf = requestAnimationFrame(tick);
 
+    const handleAnchorClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      const anchor = target.closest("a");
+      if (anchor) {
+        const href = anchor.getAttribute("href");
+        if (href && href.startsWith("#")) {
+          e.preventDefault();
+          const targetEl = document.querySelector(href) as HTMLElement;
+          if (targetEl) {
+            lenis.scrollTo(targetEl);
+          }
+        }
+      }
+    };
+
+    document.addEventListener("click", handleAnchorClick);
+
     return () => {
       cancelAnimationFrame(raf);
+      document.removeEventListener("click", handleAnchorClick);
       lenis.destroy();
     };
   }, []);
@@ -64,6 +82,7 @@ export function useSiuuCounter() {
     localStorage.setItem(SIUU_STORAGE_KEY, String(next));
 
     const audio = new Audio("/audio/siuu.mp3");
+    audio.currentTime = 2.0;
     audio.volume = 0.45;
     audio.play().catch(() => undefined);
   };

@@ -129,7 +129,7 @@ export const worldCups: WorldCup[] = [
   { year: 2014, host: "Brazil", portugalFinish: "Group stage", ronaldoStats: "1 goal, 1 assist", definingMoment: "Played through fitness concerns." },
   { year: 2018, host: "Russia", portugalFinish: "Round of 16", ronaldoStats: "4 goals", definingMoment: "The Spain hat trick became instant World Cup history." },
   { year: 2022, host: "Qatar", portugalFinish: "Quarter-finals", ronaldoStats: "1 goal", definingMoment: "A complicated ending, still part of a historic run." },
-  { year: 2026, host: "Canada, Mexico, United States", portugalFinish: "To be written", ronaldoStats: "Perhaps the final chapter", definingMoment: "One last World Cup possibility." },
+  { year: 2026, host: "Canada, Mexico, United States", portugalFinish: "Round of 16", ronaldoStats: "1 goal (Scored in 6 World Cups)", definingMoment: "A final World Cup appearance concluded by a late 1-0 defeat to Spain, ending a legendary tournament era." },
 ];
 
 export const quotes = [
