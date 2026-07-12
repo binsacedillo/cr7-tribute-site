@@ -11,7 +11,7 @@ export function TrophiesSection() {
 
   return (
     <section id="trophies" className="relative flex min-h-screen items-center bg-[#0d0c0a] px-5 pt-28 pb-12 overflow-hidden">
-      <div className="mx-auto w-full max-w-7xl">
+      <div className="mx-auto w-full max-w-6xl">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <SectionTitle kicker="Chapter Four" title="Trophy Room" text="The silverware appears like a private exhibit: sparse, lit, and deliberate." />
           <div className="flex gap-3 mb-2">
@@ -27,7 +27,7 @@ export function TrophiesSection() {
           {trophies.map((item) => (
             <article
               key={item.id}
-              className="group relative min-w-[270px] snap-start md:min-w-[340px] min-h-[400px] md:min-h-[430px] flex flex-col justify-between shrink-0 overflow-hidden border border-museum-gold/10 bg-black/45 p-6 md:p-8 text-center transition-all duration-500 hover:-translate-y-2 hover:border-museum-gold hover:shadow-[0_20px_50px_rgba(212,175,55,0.15)] pointer-events-auto"
+              className="group relative w-[min(78vw,18rem)] snap-start lg:w-[19.5rem] min-h-[350px] md:min-h-[380px] flex flex-col justify-between shrink-0 overflow-hidden border border-museum-gold/10 bg-black/45 p-5 md:p-6 text-center transition-all duration-500 hover:-translate-y-2 hover:border-museum-gold hover:shadow-[0_20px_50px_rgba(212,175,55,0.15)] pointer-events-auto"
             >
               {/* Spotlight Light Beam Overlay */}
               <div className="absolute top-0 left-1/2 -translate-x-1/2 h-44 w-32 bg-gradient-to-b from-museum-gold/10 to-transparent blur-xl opacity-80 group-hover:from-museum-gold/20 transition duration-500 pointer-events-none z-10" />
@@ -37,7 +37,7 @@ export function TrophiesSection() {
 
               {/* Floating Trophy Icon/Image Showcase */}
               <div className="relative z-20 flex justify-center mb-4 transform transition-transform duration-700 ease-out group-hover:-translate-y-3 group-hover:scale-105">
-                <div className="relative h-28 w-28 flex items-center justify-center rounded-full bg-white/5 border border-white/10 shadow-[0_0_15px_rgba(212,175,55,0.05)] group-hover:border-museum-gold/30 group-hover:shadow-[0_0_25px_rgba(212,175,55,0.15)] transition duration-500">
+                <div className="relative h-24 w-24 md:h-28 md:w-28 flex items-center justify-center rounded-full bg-white/5 border border-white/10 shadow-[0_0_15px_rgba(212,175,55,0.05)] group-hover:border-museum-gold/30 group-hover:shadow-[0_0_25px_rgba(212,175,55,0.15)] transition duration-500">
                   {item.image ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
@@ -56,7 +56,7 @@ export function TrophiesSection() {
                 <span className="text-[10px] uppercase font-mono tracking-widest text-museum-gray/40 group-hover:text-museum-gold/60 transition">
                   EXHIBIT PEDESTAL
                 </span>
-                <p className="mt-2 font-display text-6xl text-museum-white group-hover:text-museum-gold transition duration-300 md:text-7xl">
+                <p className="mt-2 font-display text-5xl text-museum-white group-hover:text-museum-gold transition duration-300 md:text-6xl">
                   {item.count}
                 </p>
                 <h3 className="text-2xl font-semibold text-museum-white">{item.title}</h3>

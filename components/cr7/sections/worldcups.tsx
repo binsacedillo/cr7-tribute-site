@@ -27,9 +27,9 @@ export function WorldCupsSection() {
           {worldCups.map((cup) => (
             <article
               key={cup.year}
-              className="group relative min-w-[270px] snap-start md:min-w-[320px] shrink-0 overflow-hidden border border-white/10 bg-black/45 pointer-events-auto"
+              className="group relative w-[min(78vw,18rem)] snap-start lg:w-[19rem] shrink-0 overflow-hidden border border-white/10 bg-black/45 pointer-events-auto"
             >
-              <div className="relative min-h-[400px] md:min-h-[420px]">
+              <div className="relative min-h-[350px] md:min-h-[380px]">
                 {cup.image ? (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
@@ -42,7 +42,7 @@ export function WorldCupsSection() {
                 )}
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.1)_0%,rgba(0,0,0,0.2)_40%,rgba(0,0,0,0.92)_100%)]" />
 
-                <div className="relative z-10 flex min-h-[400px] md:min-h-[420px] flex-col justify-between p-5 md:p-6">
+                <div className="relative z-10 flex min-h-[350px] md:min-h-[380px] flex-col justify-between p-5 md:p-6">
                   <div className="flex items-start justify-between gap-4">
                     <div>
                       <p className="font-display text-5xl text-museum-gold leading-none">{cup.year}</p>

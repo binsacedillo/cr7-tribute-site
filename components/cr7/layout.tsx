@@ -1,6 +1,6 @@
 "use client";
 
-import { Menu, X } from "lucide-react";
+import { ArrowUp, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { navItems } from "./constants";
 
@@ -71,7 +71,7 @@ export function Footer() {
       <p className="text-xl text-museum-gray">&quot;Legends retire. Legacies don&apos;t.&quot;</p>
       <p className="mt-8 font-display text-4xl uppercase leading-none text-museum-white sm:text-5xl md:text-6xl">Thank you, Cristiano.</p>
       <p className="mt-4 text-museum-gold">1985 - Forever.</p>
-      
+
       <div className="mt-12 max-w-xl mx-auto border-t border-white/5 pt-6 text-[10px] uppercase font-mono tracking-widest text-museum-gray/30 space-y-2">
         <p>Disclaimer &amp; Privacy Policy</p>
         <p className="normal-case font-sans tracking-normal leading-5">
@@ -79,5 +79,22 @@ export function Footer() {
         </p>
       </div>
     </footer>
+  );
+}
+
+export function BackToTop({ visible }: { visible: boolean }) {
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
+  return (
+    <button
+      type="button"
+      onClick={scrollToTop}
+      aria-label="Back to top"
+      className={`fixed bottom-6 right-6 z-50 inline-flex h-12 w-12 items-center justify-center rounded-full border border-museum-gold/60 bg-museum-black/90 text-museum-gold shadow-[0_8px_24px_rgba(0,0,0,0.35)] backdrop-blur transition-all duration-300 hover:border-museum-gold hover:bg-museum-gold hover:text-museum-black focus:outline-none focus:ring-2 focus:ring-museum-gold focus:ring-offset-2 focus:ring-offset-museum-black ${
+        visible ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-4 opacity-0"
+      }`}
+    >
+      <ArrowUp size={20} aria-hidden="true" />
+    </button>
   );
 }

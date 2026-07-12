@@ -17,7 +17,7 @@ export function LegacySection({
 }) {
   return (
     <section id="legacy" className="relative flex min-h-screen items-center px-5 pt-28 pb-12 overflow-hidden">
-      <div className="mx-auto w-full max-w-7xl">
+      <div className="mx-auto w-full max-w-6xl">
         <SectionTitle kicker="Chapter Seven" title="Legacy" text="The final chapter is not what he won, but what he made the world believe was possible." />
         <div className="mt-8 grid gap-6 md:grid-cols-[1.05fr_0.95fr]">
           <div className="grid gap-4">

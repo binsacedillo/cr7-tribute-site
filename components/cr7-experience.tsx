@@ -3,7 +3,7 @@
 import { useCallback, useState } from "react";
 import { quotes } from "@/data/site";
 import { useEscapeToClose, useScrollHeader, useSiuuCounter, useSmoothScroll } from "./cr7/hooks";
-import { Footer, Header } from "./cr7/layout";
+import { BackToTop, Footer, Header } from "./cr7/layout";
 import { DetailModal } from "./cr7/modal";
 import { CareerSection } from "./cr7/sections/career";
 import { HeroSection } from "./cr7/sections/hero";
@@ -42,10 +42,7 @@ export function CR7Experience() {
       <LegacySection quoteIndex={quoteIndex} siuuCount={siuu.count} onNextQuote={showNextQuote} onSiuu={siuu.increment} />
       <Footer />
       <DetailModal modal={modal} onClose={closeModal} />
-      {/* Floating Watermark */}
-      <div className="fixed bottom-6 right-6 z-50 hidden pointer-events-none select-none font-mono text-[9px] uppercase tracking-[0.35em] text-museum-gold/20 md:block">
-        Vince Aced 2026
-      </div>
+      <BackToTop visible={scrolled} />
     </main>
   );
 }

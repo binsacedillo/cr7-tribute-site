@@ -258,10 +258,14 @@ export const worldCups: WorldCup[] = [
 ];
 
 export const quotes = [
-  "Your love makes me strong.",
+  "Your love makes me strong. Your hate makes me unstoppable.",
   "Talent without working hard is nothing.",
-  "Dreams are not what you see in your sleep. Dreams are things which do not let you sleep.",
-  "I don't chase records. Records chase me.",
+  "Dreams are not enough. You need to work very hard.",
+  "I'm not a perfectionist, but I like to feel that things are done well.",
+  "If you think you're perfect already, then you never will be.",
+  "I don't have to show anything to anyone. There is nothing to prove.",
+  "We don't want to tell our dreams. We want to show them.",
+  "Dedication, hard work all the time, and belief.",
 ];
 
 export const legacyPoints = ["Discipline", "Longevity", "Work Ethic", "Inspiration", "Influence"];

@@ -14,7 +14,7 @@ export function MadeiraSection({ openModal }: { openModal: OpenModal }) {
           backgroundImage: "linear-gradient(180deg, rgba(9,9,9,1) 0%, rgba(9,9,9,0.3) 50%, rgba(9,9,9,1) 100%), url('/images/madeira.jpg')",
         }}
       />
-      <div className="relative z-10 mx-auto grid w-full max-w-7xl gap-12 md:grid-cols-[0.9fr_1.1fr] md:items-center">
+      <div className="relative z-10 mx-auto grid w-full max-w-6xl gap-8 md:grid-cols-[0.9fr_1.1fr] md:items-center lg:gap-12">
         <SectionTitle
           kicker="Chapter One"
           title="The Boy from Madeira"

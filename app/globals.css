@@ -30,6 +30,33 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
+.hero-ronaldo-bg {
+  background-repeat: no-repeat;
+  background-size: cover, auto 145%;
+  background-position: center, 28% center;
+}
+
+@media (min-width: 640px) {
+  .hero-ronaldo-bg {
+    background-size: cover, auto 155%;
+    background-position: center, 25% center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-ronaldo-bg {
+    background-size: cover, auto 165%;
+    background-position: center, 24% center;
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero-ronaldo-bg {
+    background-size: cover, auto 175%;
+    background-position: center, 22% center;
+  }
+}
+
 ::selection {
   background: #d4af37;
   color: #090909;

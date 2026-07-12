@@ -11,7 +11,7 @@ export function RecordsSection() {
 
   return (
     <section id="records" className="relative flex min-h-screen items-center px-5 pt-28 pb-12 overflow-hidden">
-      <div className="mx-auto w-full max-w-7xl">
+      <div className="mx-auto w-full max-w-6xl">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <SectionTitle kicker="Chapter Three" title="The Records" text="Numbers that became monuments, animated as exhibits rather than listed as trivia." />
           <div className="flex gap-3 mb-2">
@@ -27,7 +27,7 @@ export function RecordsSection() {
           {records.map((record) => (
             <article
               key={record.id}
-              className="group relative min-w-[270px] snap-start md:min-w-[340px] min-h-[320px] md:min-h-[340px] flex flex-col justify-between shrink-0 overflow-hidden border border-white/10 bg-museum-panel p-6 md:p-8 transition-all duration-500 hover:-translate-y-2 hover:border-museum-gold/40 hover:shadow-gold pointer-events-auto"
+              className="group relative w-[min(78vw,18rem)] snap-start lg:w-[19.5rem] min-h-[290px] md:min-h-[310px] flex flex-col justify-between shrink-0 overflow-hidden border border-white/10 bg-museum-panel p-5 md:p-6 transition-all duration-500 hover:-translate-y-2 hover:border-museum-gold/40 hover:shadow-gold pointer-events-auto"
             >
               {/* Gold Radial Glow Highlight in background */}
               <div className="absolute -left-12 -top-12 h-28 w-28 rounded-full bg-museum-gold/5 blur-2xl group-hover:bg-museum-gold/10 transition duration-500" />
@@ -44,7 +44,7 @@ export function RecordsSection() {
               </div>
 
               <div>
-                <p className="mt-4 font-display text-5xl text-museum-white group-hover:text-museum-gold transition duration-300 md:text-6xl">
+                <p className="mt-4 font-display text-5xl text-museum-white group-hover:text-museum-gold transition duration-300 md:text-[3.5rem]">
                   <CountUp value={record.value} suffix={record.suffix} />
                 </p>
                 <h3 className="mt-2 text-lg font-semibold text-museum-white">{record.label}</h3>

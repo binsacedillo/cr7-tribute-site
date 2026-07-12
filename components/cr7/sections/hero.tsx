@@ -18,7 +18,7 @@ export function HeroSection() {
     <section id="home" className="relative flex min-h-screen items-center px-5 pt-28 pb-16 md:pb-24 overflow-hidden">
       {/* Background Image Layer */}
       <div
-        className="absolute inset-0 bg-cover bg-no-repeat bg-[position:32%_center] md:bg-center"
+        className="hero-ronaldo-bg absolute inset-0"
         style={{
           backgroundImage:
             "linear-gradient(90deg,rgba(9,9,9,0.96),rgba(9,9,9,0.44),rgba(9,9,9,0.92)), url('/images/hero/cristiano.jpg')",
