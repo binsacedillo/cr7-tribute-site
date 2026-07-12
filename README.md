@@ -1,50 +1,100 @@
-# 👑 Cristiano Ronaldo (CR7) Tribute Site
+# Cristiano Ronaldo (CR7) Tribute Site
 
-An interactive, premium digital museum commemorating the legendary career, records, and legacy of Cristiano Ronaldo. Designed with a luxury dark-gold museum aesthetic, immersive scrolling animations, and custom vector exhibits.
+A cinematic, single-page tribute website for Cristiano Ronaldo. The experience is styled like a dark-gold digital museum, with chapter-based sections, horizontal exhibit cards, modal details, smooth scrolling, and responsive layouts for mobile, tablet, and desktop.
 
-## ✨ Features
+## Features
 
-- **🏆 Chapter-based Journey**: Navigate through his career step-by-step, from his humble origins to global legacy.
-- **🎨 Luxury Museum Aesthetic**: Sleek glassmorphism, curated gold accent styling, and smooth typography.
-- **📱 Fullscreen Exhibits**: Every chapter is tailored to occupy the full viewport height (`min-h-screen`) for a private gallery feel.
-- **⚡ Custom Vector Crests**: Lightweight, crisp, hand-crafted SVG emblems for all major clubs (Sporting CP, Manchester United, Real Madrid, Juventus, Al Nassr).
-- **🛡️ Custom SVG Trophy Room**: Exquisite vector illustrations representing the Ballon d'Or, Champions League, League Titles, Euro 2016, Nations League, and Club World Cups.
-- **🗺️ World Cup Journey flags**: Visual, high-resolution flag badges mapping his legendary international tournaments.
-- **🔊 Interactive SIUU Counter & Quotes**: Tap into his mindset with dynamic quote generation and an interactive SIUU soundboard trigger.
+- Chapter-based long-scroll homepage covering Madeira, career, records, trophies, iconic moments, World Cup journey, and legacy.
+- Responsive Ronaldo hero image with custom CSS focal positioning.
+- Fixed navigation that changes styling after scroll.
+- Horizontal drag-scroll exhibit cards for career, records, trophies, moments, and World Cup chapters.
+- Smaller responsive card sizing using viewport-aware widths.
+- Detail modals for club, milestone, and iconic moment content.
+- Interactive SIUU counter with local storage.
+- Quote generator using static Ronaldo quote data.
+- Floating bottom-right back-to-top button that appears after scrolling.
+- Custom SVG-style club crests, trophy icons, and World Cup flag badges.
 
-## 🚀 Tech Stack
+## Tech Stack
 
-- **Framework**: [Next.js](https://nextjs.org/) (App Router, React 19)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **Icons**: [Lucide React](https://lucide.dev/)
-- **Smooth Scroll**: [Lenis](https://lenis.darkroom.engineering/)
-- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- Next.js 15 App Router
+- React 19
+- TypeScript
+- Tailwind CSS
+- Lucide React icons
+- Lenis smooth scrolling
+- Static typed content from `data/site.ts`
 
-## 🛠️ Local Development
+## Project Structure
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/binsacedillo/cr7-tribute-site.git
-   cd cr7-tribute-site
-   ```
+```text
+app/
+  globals.css
+  layout.tsx
+  page.tsx
 
-2. **Install dependencies**:
-   ```bash
-   npm install
-   ```
+components/
+  cr7/
+    layout.tsx
+    modal.tsx
+    hooks.ts
+    ui.tsx
+    sections/
+      hero.tsx
+      madeira.tsx
+      career.tsx
+      records.tsx
+      trophies.tsx
+      moments.tsx
+      worldcups.tsx
+      legacy.tsx
+  cr7-experience.tsx
 
-3. **Start the development server**:
-   ```bash
-   npm run dev
-   ```
+data/
+  site.ts
 
-4. **Open the browser**:
-   Navigate to [http://localhost:3000](http://localhost:3000) to see the experience live.
+public/
+  images/
+  audio/
+```
 
-## 📦 Production Build
+## Local Development
 
-To compile a clean optimized production build:
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Open:
+
+```text
+http://localhost:3000
+```
+
+## Verification
+
+Run lint:
+
+```bash
+npm run lint
+```
+
+Run a production build:
+
 ```bash
 npm run build
-npm run start
 ```
+
+## Notes
+
+- The site is static and does not require a backend, database, authentication, or CMS.
+- Main content is managed in `data/site.ts`.
+- Hero image positioning is controlled by `.hero-ronaldo-bg` in `app/globals.css`.
+- Card responsiveness is handled directly in the section components with Tailwind viewport-aware widths.
